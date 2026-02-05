@@ -3,14 +3,13 @@
 A high-performance volume slider for GNOME Shell Quick Settings.
 
 **The Problem:**
-The stock GNOME volume slider can cause stuttering, audio crackling, and UI freezes because it floods the audio server (PipeWire/PulseAudio) with hundreds of update commands per second while dragging.
+The stock GNOME volume slider often gets "stuck," freezes, or lags when dragged quickly. This happens because the default implementation floods the audio server (PulseAudio/PipeWire) with synchronous update commands for every single pixel of movement. If the system cannot process them fast enough, the shell interface locks up until the audio server catches up.
 
 **The Solution:**
-This extension replaces the stock slider with an optimized implementation that:
-* **Throttles audio commands** to ~40Hz (perfectly smooth for hearing, safe for the server).
-* **Decouples the UI:** The slider moves instantly at your monitor's full refresh rate (60Hz, 144Hz, 240Hz, etc.) without waiting for the audio server.
-* **Uses native Gvc integration** for zero overhead.
-* **Prevents "snap-back" glitches** during rapid volume changes.
+This extension replaces the stock slider with a custom implementation that separates the visual UI from the audio backend:
+* **Fixes the "Stuck Slider" Bug:** The slider always moves instantly and smoothly, no matter how fast you drag it.
+* **Throttles Audio Calls:** Updates are sent to the audio server at a safe rate (~40Hz), preventing system floods while keeping the UI responsive.
+* **Zero Lag:** Uses native `libgnome-volume-control` (Gvc) integration for maximum performance.
 
 ### Installation
 
