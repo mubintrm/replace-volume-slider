@@ -6,7 +6,7 @@ Without Extension:
 ![buggedslider1](https://github.com/user-attachments/assets/bac6362a-3fd9-4fab-9bf6-b63ae050bcf2)
 
 With Extension:
-![fixedslider](https://github.com/user-attachments/assets/239f2a07-3d54-4b62-a003-2ddcde13de6b)
+   ![fixedslider](https://github.com/user-attachments/assets/239f2a07-3d54-4b62-a003-2ddcde13de6b)
 
 **The Problem:**
 The stock GNOME volume slider often gets "stuck," freezes, or lags when dragged quickly. This happens because the default implementation floods the audio server (PulseAudio/PipeWire) with synchronous update commands for every single pixel of movement. If the system cannot process them fast enough, the shell interface locks up until the audio server catches up.
