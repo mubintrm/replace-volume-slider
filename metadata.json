@@ -1,6 +1,6 @@
 {
   "name": "Replace Volume Slider",
-  "description": "Fixes the volume slider getting stuck or freezing when dragged quickly. Replaces the default slider with a high-performance version that throttles backend updates to prevent system freezes, ensuring smooth movement on all displays.",
+  "description": "Fixes the volume slider getting stuck, freezing the UI, and causing audio lag when dragged quickly. Replaces the default slider with a high-performance version that prevents system floods, ensuring smooth audio and responsive controls.",
   "uuid": "replace-volume-slider@MubinTR",
   "shell-version": ["45","46","47","48","49","50"],
   "url": "https://github.com/mubintrm/replace-volume-slider"
