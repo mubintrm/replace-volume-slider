@@ -30,7 +30,7 @@ This extension replaces the stock slider with an optimized implementation that d
 4. Enable via the Extensions app.
 
 ### Compatibility
-* GNOME 45 - 48+
+* GNOME 45 - 50+
 
 ### License
 GPL-3.0
