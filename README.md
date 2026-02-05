@@ -3,7 +3,7 @@
 A high-performance volume slider for GNOME Shell Quick Settings.
 
 **The Problem:**
-The stock GNOME volume slider can cause stuttering, audio crackling, and UI freezes because it floods the audio server (PipeWire/PulseAudio) with hundreds of update commands per second while dragging. This is especially noticeable on high-refresh-rate displays (144Hz+) but affects system performance on all machines.
+The stock GNOME volume slider can cause stuttering, audio crackling, and UI freezes because it floods the audio server (PipeWire/PulseAudio) with hundreds of update commands per second while dragging.
 
 **The Solution:**
 This extension replaces the stock slider with an optimized implementation that:
