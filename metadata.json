@@ -1,0 +1,14 @@
+{
+  "name": "Replace Volume Slider",
+  "description": "Replaces the Quick Settings volume slider with a high-performance, stutter-free version. Fixes UI lag and audio glitches by throttling server updates, ensuring a smooth experience on all systems.",
+  "uuid": "replace-volume-slider@MubinTR",
+  "shell-version": [
+    "45",
+    "46",
+    "47",
+    "48",
+    "49",
+    "50"
+  ],
+  "url": "https://github.com/mubintrm/replace-volume-slider"
+}
