@@ -1,8 +1,10 @@
 # Replace Volume Slider (GNOME Extension)
 
 A high-performance volume slider for GNOME Shell Quick Settings.
+
 Without Extension:
 ![buggedslider1](https://github.com/user-attachments/assets/bac6362a-3fd9-4fab-9bf6-b63ae050bcf2)
+
 With Extension:
 ![fixedslider](https://github.com/user-attachments/assets/239f2a07-3d54-4b62-a003-2ddcde13de6b)
 
