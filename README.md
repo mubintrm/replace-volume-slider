@@ -2,31 +2,35 @@
 
 A high-performance volume slider for GNOME Shell Quick Settings.
 
-Without Extension:
-![buggedslider1](https://github.com/user-attachments/assets/bac6362a-3fd9-4fab-9bf6-b63ae050bcf2)
+### The Problem
+When dragging the stock GNOME volume slider quickly, two major issues often occur:
+1.  **UI Freeze:** The slider gets "stuck" or lags behind the mouse cursor because the shell blocks while waiting for the audio backend.
+2.  **Audio Lag/Stutter:** The sheer volume of updates floods the audio server (PipeWire/PulseAudio), causing the actual audio playback to stutter, crackle, or lag.
 
-With Extension:
-   ![fixedslider](https://github.com/user-attachments/assets/239f2a07-3d54-4b62-a003-2ddcde13de6b)
+**Stock Behavior:**
+![Stock GNOME Slider Bug](https://github.com/user-attachments/assets/bac6362a-3fd9-4fab-9bf6-b63ae050bcf2)
 
-**The Problem:**
-The stock GNOME volume slider often gets "stuck," freezes, or lags when dragged quickly. This happens because the default implementation floods the audio server (PulseAudio/PipeWire) with synchronous update commands for every single pixel of movement. If the system cannot process them fast enough, the shell interface locks up until the audio server catches up.
+---
 
-**The Solution:**
-This extension replaces the stock slider with a custom implementation that separates the visual UI from the audio backend:
-* **Fixes the "Stuck Slider" Bug:** The slider always moves instantly and smoothly, no matter how fast you drag it.
-* **Throttles Audio Calls:** Updates are sent to the audio server at a safe rate (~40Hz), preventing system floods while keeping the UI responsive.
-* **Zero Lag:** Uses native `libgnome-volume-control` (Gvc) integration for maximum performance.
+### The Solution
+This extension replaces the stock slider with an optimized implementation that decouples the visual UI from the backend:
+* **Fixes Audio Lag:** Throttles backend updates to a safe rate (~40Hz), preventing the audio server from choking on command floods.
+* **Fixes Sticky Slider:** The UI moves instantly at your monitor's full refresh rate, independent of the audio server's processing time.
+* **Native Integration:** Uses `libgnome-volume-control` (Gvc) directly for zero overhead.
+
+**Extension Behavior:**
+![Fixed Slider Smooth](https://github.com/user-attachments/assets/239f2a07-3d54-4b62-a003-2ddcde13de6b)
 
 ### Installation
 
 **Manual Installation:**
 1. Clone this repository.
 2. Copy the folder to `~/.local/share/gnome-shell/extensions/replace-volume-slider@MubinTR`.
-3. Log out and log back in.
+3. Log out and log back in (or restart GNOME Shell).
 4. Enable via the Extensions app.
 
 ### Compatibility
-* GNOME 45 - 49+
+* GNOME 45 - 48+
 
 ### License
 GPL-3.0
