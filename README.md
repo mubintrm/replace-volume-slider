@@ -11,6 +11,7 @@ When dragging the stock GNOME volume slider quickly, two major issues often occu
 ![Stock GNOME Slider Bug](https://github.com/user-attachments/assets/bac6362a-3fd9-4fab-9bf6-b63ae050bcf2)
 ---
 (Note: Audio also falls behind and lags normally, so you don't have to slide it like crazy as i did to realize the problem.)
+
 ---
 ### The Solution
 This extension replaces the stock slider with an optimized implementation that decouples the visual UI from the backend:
